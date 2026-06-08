@@ -190,18 +190,10 @@ This section describes step-by-step what happens from raw PDFs to a question-ans
 
 If you'd like, I can now modify `app.py` to switch the prompt placeholder to `{context}`, harden session state usage, and add FAISS persistence. Which change should I apply next?
 
-## 10. Example fixes applied
-
-- Ensure `ChatPromptTemplate` uses `{context}` instead of `{retrieved_docs}`.
-- Use `st.session_state['vectors']` as the sentinel key when caching the FAISS store.
-- Validate that `files/` contains documents before attempting to build the index.
-
-## 11. Next steps (optional)
+## 12. Next steps (optional)
 
 - Add an uploader in Streamlit to add files via the UI.
 - Persist the FAISS index to disk for faster startup.
 - Add unit tests for the document-loading and embedding pipeline.
 
 ---
-
-If you want, I can apply the code fixes now (update `app.py` to use `{context}`), persist the FAISS index, and add an upload UI. Which would you like next?
